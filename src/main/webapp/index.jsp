@@ -6,6 +6,9 @@
 <title>欢迎光临！</title>
 </head>
 <body>
-	
+	<form action="loginMng/login.do" method="post">
+		登录名：<input type="text" name="loginName"/>
+		密码：<input type="password" name="loginPwd">
+	</form>
 </body>
 </html>
