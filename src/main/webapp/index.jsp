@@ -8,7 +8,9 @@
 <body>
 	<form action="loginMng/login.do" method="post">
 		登录名：<input type="text" name="loginName"/>
-		密码：<input type="password" name="loginPwd">
+		<br>
+		密码：<input type="password" name="loginPwd"/>
+		<input type="submit" value="提交"/>
 	</form>
 </body>
 </html>
