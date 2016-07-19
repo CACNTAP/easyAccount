@@ -5,16 +5,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.tap.entity.Users;
+import com.tap.service.impl.UsersServiceImpl;
 
 @Controller
 @RequestMapping("/loginMng")
 public class LoginMng {
 
+	
+	UsersServiceImpl service =new UsersServiceImpl();  
+	
 	@RequestMapping("/login.do")
 	public String login(@RequestParam("loginName") String name,
 						@RequestParam("loginPwd") String password){
+		Users user = new Users();
+		user.setUserName(name);
+		user.setPassword(password);
 		
-		return "index";
+		if(service.isExist(user))
+		{
+			return "index";
+		}
+		else
+			return "login";
 	}
 	
 	@RequestMapping("/register.do")
@@ -24,6 +36,10 @@ public class LoginMng {
 		user.setMobile(mobile);
 		user.setMail(mail);
 		user.setPassword(password);
-		return "";
+		if(service.isExist(user)){
+			service.save(user);
+			return "login";
+		}
+		return "index";
 	}
 }
