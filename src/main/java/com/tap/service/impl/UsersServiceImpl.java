@@ -9,7 +9,7 @@ import com.tap.service.UsersService;
 @Service("SERVICE_NAME")
 public class UsersServiceImpl implements UsersService {
 	
-	UsersDao dao = UsersDao.newInstance();
+	UsersDao dao = new UsersDao();
 	
 	/**
 	 * 

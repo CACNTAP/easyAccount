@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="mapping.userMapper">
+<mapper namespace="mapping.accountMapper">
 
-	<select id="getUser" parameterType="map" resultType="com.tap.entity.Users">
-		select * from Users where 1=1
-		<if test="userName!=''"> and userName =#{userName}</if>
+	<select id="getaccount" parameterType="map" resultType="com.tap.entity.Account">
+		select * from account where 1=1
+		<if test="accountName!=''"> and accountName =#{accountName}</if>
 		<if test="password!=''"> and password=#{password}</if><!-- 
 		<if test="mobile!=''"> and user_mobile=#{mobile}</if>
 		<if test="mail!=''"> and user_mail=#{mail}</if> -->

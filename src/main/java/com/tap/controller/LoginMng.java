@@ -30,16 +30,16 @@ public class LoginMng {
 	}
 	
 	@RequestMapping("/register.do")
-	public String register(String name,String mobile,String mail,String password){
+	public String register(String userName,String mobile,String mail,String password){
 		Users user = new Users();
-		user.setUserName(name);
+		user.setUserName(userName);
 		user.setMobile(mobile);
 		user.setMail(mail);
 		user.setPassword(password);
-		if(service.isExist(user)){
+		if(!service.isExist(user)){
 			service.save(user);
-			return "login";
+			return "index";
 		}
-		return "index";
+		return "login";
 	}
 }

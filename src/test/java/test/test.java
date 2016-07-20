@@ -1,16 +1,20 @@
 package test;
 
-import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
-
-import com.tap.dao.DBSession;
+import com.tap.dao.UsersDao;
+import com.tap.entity.Users;
 
 public class test {
 
 	@Test
 	public void testDB(){
-		SqlSession session = DBSession.newInstance();
+		Users user = new Users();
+		user.setUserName("dasd");
+		user.setPassword("asd");
+		user.setMobile("123");
+		user.setMail("123@123");
 		
-		System.out.println(session);
+		UsersDao dao = new UsersDao();
+		dao.insertUser(user);
 	}
 }

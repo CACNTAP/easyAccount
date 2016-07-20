@@ -100,15 +100,8 @@
                                     <div class="control-group">
                                         <label class="control-label">Username</label>
                                         <div class="controls">
-                                            <input type="text" class="input-block-level" data-validate="{required: true, messages:{required:'Please enter field username'}}" name="username" id="username" autocomplete="off" />
+                                            <input type="text" class="input-block-level" data-validate="{required: true, messages:{required:'Please enter field username'}}" name="userName" id="username" autocomplete="off" />
                                             <p class="help-block muted helper-font-small">May contain letters, digits, dashes and underscores, and should be between 2 and 20 characters long.</p>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label">Mobile</label>
-                                        <div class="controls">
-                                            <input type="text" class="input-block-level" data-validate="{required:false, email:true, messages:{required:'Please enter field email', email:'Please enter a valid mobile number'}}" name="mobile" id="mobile" autocomplete="off" />
-                                            <p class="help-block muted helper-font-small"><strong>Type carefully.</strong> You will be sent a confirmation email.</p>
                                         </div>
                                     </div>
                                     <div class="control-group">
